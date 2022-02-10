@@ -16,7 +16,12 @@ export default class RandomPicker {
     }
 
     pick() {
+        if (this.extracted.length === 0) {
+            throw new Error("Source exhausted. Please reset it.");
+        }
         const index = Math.floor(Math.random() * this.extracted.length);
-        return this.extracted.splice(index, 1);
+        const value = this.extracted[index];
+        this.extracted.splice(index, 1);
+        return value;
     }
 }

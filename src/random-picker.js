@@ -7,6 +7,10 @@ export default class RandomPicker {
         this.reset();
     }
 
+    clone() {
+        return new RandomPicker(this.source);
+    }
+
     reset() {
         this.extracted = this.source.slice();
     }

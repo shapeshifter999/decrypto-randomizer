@@ -5,17 +5,10 @@ const cards = [1,2,3,4]
 const randomPicker = new RandomPicker(cards);
 const sequencePicker = new SequencePicker(randomPicker);
 
-/*
-for (let i=0; i<100; i++) {
+for (let i=0; i<25; i++) {
     const sequence = sequencePicker.generate();
     console.log(sequence);
 }
-*/
-console.log(randomPicker.pick());
-console.log(randomPicker.pick());
-console.log(randomPicker.pick());
-console.log(randomPicker.pick());
-console.log(randomPicker.pick());
 
 
 //generate([1, 2, 3, 4], 0);

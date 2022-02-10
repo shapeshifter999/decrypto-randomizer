@@ -26,11 +26,12 @@ export default class SequencePicker {
         return sequence
     }
 
-    maxCapacity(number, round) {
+    maxCapacity(possibility, round) {
         let result = 1;
         while (round > 0) {
-            result *= number;
-            number--;
+            result *= possibility;
+
+            possibility--;
             round--;
         }
         return result;
